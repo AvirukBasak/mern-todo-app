@@ -1,0 +1,53 @@
+.newItemForm {
+    padding: 2rem;
+    margin: 0 auto 50px 0px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.newItemForm h1 {
+    color: rgb(169, 169, 197);
+    margin: 0;
+    padding: 20px 0;
+}
+
+.newItemForm p {
+    color: white;
+}
+
+.newItemForm input {
+    outline: none;
+    border: 1px solid hsl(200, 96%, 29%);
+    background: hsl(200, 97%, 14%);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    color: hsl(200, 100%, 90%);
+}
+
+.newItemForm input:focus {
+    border: 1px solid hsl(200, 100%, 70%);
+}
+
+.formRow {
+    margin: 7px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    height: 35px;
+    align-items: center;
+    align-content: center;
+}
+
+.formRow label {
+    width: 20%;
+}
+
+.formRow input {
+    width: 80%;
+    height: 100%;
+}

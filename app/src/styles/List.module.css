@@ -1,0 +1,75 @@
+.list {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+    list-style: none;
+}
+
+.list li:has(input:checked) label {
+    color: hsl(200, 20%, 40%);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.list li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.list li label {
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.list li:has(input:focus-visible) label {
+    outline: 1px solid hsl(200, 100%, 50%);
+}
+
+/* this is to hide the actual checkbox */
+.list li input {
+    display: none;
+}
+
+/* position the delete button to extreme left */
+.list li button {
+    margin-left: auto;
+}
+
+.list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: hsl(200, 100%, 90%);
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 150ms;
+}
+
+.list li label:hover::before {
+    background: hsl(200, 100%, 80%);
+    transition-duration: 150ms;
+}
+
+.list li:has(input:checked) label::before {
+    content: "✔";
+    background: hsl(212, 96%, 49%);
+    color: hsl(0, 0%, 100%);
+    font-size: 0.75rem;
+    font-weight: bold;
+    transition-duration: 150ms;
+}
+
+.list li:has(input:checked) label:hover::before {
+    background: hsl(212, 91%, 42%);
+    transition-duration: 150ms;
+}
