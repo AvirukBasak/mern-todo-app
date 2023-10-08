@@ -7,7 +7,7 @@ export default function App({ page }) {
   return (
     <>
       <Form />
-      <img src="/images/background.jpg"/>
+      </* <img src="/images/background.jpg"/> */></>
     </>
   );
 }
