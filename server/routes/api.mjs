@@ -13,7 +13,7 @@ async function downloadData(uuid) {
     const db = conn.db('nextjs-todo-db');
     try {
         const data = await db.collection('todos').findOne({ uuid });
-        console.log('download: ' + JSON.stringify({ uuid: data.uuid, todoList: data.todoList }));
+        // console.log('download: ' + JSON.stringify({ uuid: data.uuid, todoList: data.todoList }));
         return { uuid: data.uuid, todoList: data.todoList, timestamp: data.timestamp };
     } catch (e) {
         console.error(e);
@@ -21,7 +21,7 @@ async function downloadData(uuid) {
 }
 
 async function uploadData(uuid, todoList) {
-    console.log('upload: ' + JSON.stringify({ uuid, todoList }));
+    // console.log('upload: ' + JSON.stringify({ uuid, todoList }));
     const db = conn.db('nextjs-todo-db');
     try {
         const res = await db.collection('todos').replaceOne(
