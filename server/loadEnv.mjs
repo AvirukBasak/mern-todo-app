@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -21,6 +20,14 @@ if (!process.env.MONGODB_URI) {
     console.error('ERROR: '
         + 'couldn\'t find MONGODB_URI enviroment variable\n'
         + `  add MONGODB_URI to '${path.join(__dirname, '.env.local')}'`
+    );
+    process.exit(1);
+}
+
+if (!process.env.DATABASE_NAME) {
+    console.error('ERROR: '
+        + 'couldn\'t find DATABASE_NAME enviroment variable\n'
+        + `  add DATABASE_NAME to '${path.join(__dirname, '.env.local')}'`
     );
     process.exit(1);
 }

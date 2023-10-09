@@ -10,7 +10,7 @@ api.get('/', async (req, res) => {
 });
 
 async function downloadData(uuid) {
-    const db = conn.db('nextjs-todo-db');
+    const db = conn.db(process.env.DATABASE_NAME);
     try {
         const data = await db.collection('todos').findOne({ uuid });
         // console.log('download: ' + JSON.stringify({ uuid: data.uuid, todoList: data.todoList }));
@@ -22,7 +22,7 @@ async function downloadData(uuid) {
 
 async function uploadData(uuid, todoList) {
     // console.log('upload: ' + JSON.stringify({ uuid, todoList }));
-    const db = conn.db('nextjs-todo-db');
+    const db = conn.db(process.env.DATABASE_NAME);
     try {
         const res = await db.collection('todos').replaceOne(
             { uuid },
