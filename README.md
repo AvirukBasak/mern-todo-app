@@ -1,6 +1,7 @@
 # MERN Todo App
 
 ## Getting Started
+If you have **Docker**, you're (probably) all set. Otherwise follow the documentation below:
 - See ReactJS dir [here](app).
 - See the ExpressJS dir [here](server).
 
